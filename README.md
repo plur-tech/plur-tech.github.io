@@ -1,1 +1,0 @@
-# plur-tech.github.io
