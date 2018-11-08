@@ -1,0 +1,90 @@
+html, body {
+	min-width: 320px;
+	background-color: #1e1e1e;
+}
+
+.page-wrapper {
+	background-color: #ffffff;
+}
+
+/* COMMON styles */
+
+.height-100vh {
+	height: 100vh;
+}
+
+.text-light {
+	font-weight: 200;
+}
+
+.text-bold {
+	font-weight: 400;
+}
+
+.no-pointer-events {
+	pointer-events: none;
+}
+
+.margin-bottom {
+	margin-bottom: 30px!important;
+}
+
+.unselectable {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+.max-height-equal-h3 {
+	max-height: 2rem;
+}
+
+.uk-card.card-border-top {
+	border-top: 2px solid #1e1e1e;
+}
+
+.uk-card.card-border-top-hover:hover {
+	border-top: 2px solid #0b8fe8;
+}
+
+.disable-after.uk-accordion-title::after {
+	content: none;
+}
+
+/* COMMON styles END */
+
+/* SECTION styles */
+/* SECTION styles END */
+
+/* UIKit overwritten START */
+
+.uk-section-primary {
+	background-color: #0b8fe8!important;
+}
+
+.uk-section-secondary {
+	background-color: #1e1e1e!important;
+}
+
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6 {
+	font-weight: 200;
+}
+
+.uk-dotnav>.uk-active>* {
+	background-color: #0b8fe8;
+}
+
+.uk-dotnav>*>* {
+	border: 1px solid #0b8fe8;
+}
+
+.uk-dotnav>*>*:hover {
+	background-color: #0b8fe8;
+	border: 1px solid #0b8fe8;
+}
+
+/* UIKit overwritten END */
+
+
+/* END OF CSS */

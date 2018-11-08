@@ -1,0 +1,54 @@
+﻿{% extends "two_columns.html" %}
+
+{% block content %}
+  {% for article in articles_page.object_list %}
+  <div class="item">
+    <div class="content">
+      {% if article.image %}
+      <div class="post-img">
+        <a href="{{ SITEURL }}/{{ article.url }}">
+          <img src="{{ SITEURL }}/images/{{ article.image }}" alt="{{ article.title}}" class="post-image">
+        </a>
+      </div>
+      {% endif %}
+
+      <div class="post-info">
+        <a href="{{ SITEURL }}/{{ article.url }}">
+          <h5>{{ article.title }}</h5>
+        </a>
+        <div class="mor-inf">
+          <ul>
+            <li><span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>Posted By {% for author in article.authors %}<a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% if not loop.last %}, {% endif%}{% endfor %}</li>
+
+            <li><span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>{{ article.locale_date }}</li>
+
+            <li><span class="icon"><i class="fa fa-tags" aria-hidden="true"></i></span>{% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif%}{% endfor %}</li>
+          </ul>
+        </div>
+
+        {% if SHOW_FULL_ARTICLE %}
+              <p>{{ article.content }}</p>
+            {% elif article.summary %}
+              <p>{{ article.summary|truncate(280) }}</p>
+            {% endif %}
+
+        <div class="mt-50">
+          <a href="{{ SITEURL }}/{{ article.url }}" class="more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  {% if DEFAULT_PAGINATION %}
+  <!-- Pagination -->
+  <div class="numb text-center">
+      {% if articles_page.has_previous() %}
+      <a href="{{ SITEURL }}/{{ articles_previous_page.url }}"><span>Order Posts</span></a>
+      {% endif %}
+      {% if articles_page.has_next() %}
+      <a href="{{ SITEURL }}/{{ articles_next_page.url }}"><span>Next</span></a>
+      {% endif %}
+  </div>
+  {% endif %}
+{% endblock content %}

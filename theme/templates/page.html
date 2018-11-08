@@ -1,0 +1,14 @@
+﻿{% extends "full_page.html" %}
+
+{% block title %}- {{ page.title }}{% endblock title %}
+
+{% block page_breadcrumbs %}
+	<li>{{ page.title }}</li>
+{% endblock page_breadcrumbs %}
+
+{% block content %}
+	<h4 class="head-left">
+		{{ page.title }}{% if page.subtitle %}<small> - {{ page.subtitle }}</small>{% endif %}
+	</h4>
+	<p>{{ page.content }}</p>
+{% endblock content %}

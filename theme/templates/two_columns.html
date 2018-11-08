@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+
+{% block content_wrapper %}
+<div class="row">
+  <div class="col-md-8">
+      <div class="posts">
+          {% block content %}{% endblock content %}
+          {% block DEFAULT_PAGINATION %}{% endblock DEFAULT_PAGINATION %}
+      </div>
+  </div>
+
+  <!-- side bar -->
+  <div class="col-md-4">
+      <div class="side-bar">
+          {% if 'categories' in SIDEBAR_DISPLAY %}
+          <div class="widget">
+              <div class="catg">
+                  <div class="side-tit">
+                      <h6 class="ctit">Categories</h6>
+                  </div>
+                  
+                  {% for cat, null in categories %}
+                  <h5><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></h5>
+                  {% endfor %}
+              </div>
+          </div>
+          {% endif %}
+
+          {% if 'tags' in SIDEBAR_DISPLAY %}
+          <div class="widget">
+              <div class="tags">
+                  <div class="side-tit">
+                      <h6 class="ctit">Tags</h6>
+                  </div>
+
+                  {%- for tag, articles in tags|sort %}
+                      <a href="{{ SITEURL }}/{{ tag.url }}"><span>{{ tag }}</span></a>
+                  {% endfor %}
+              </div>
+          </div>
+          {% endif %}
+
+          {% if 'social' in SIDEBAR_DISPLAY %}
+          <div class="widget">
+              <div class="follow">
+                  <div class="side-tit">
+                      <h6 class="ctit">Follow Me</h6>
+                  </div>
+                  <div class="social">
+                      {% for network, url in SOCIAL %}
+                      <a href="{{ url }}" target="_blank">
+                          <span><i class="fa fa-{{ network }}" aria-hidden="true"></i></span>
+                      </a>
+                      {% endfor %}
+                  </div>
+              </div>
+          </div>
+          {% endif %}
+      </div>
+  </div>
+</div>
+{% endblock content_wrapper %}

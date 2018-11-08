@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ DEFAULT_LANG }}"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="{{ DEFAULT_LANG }}"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="{{ DEFAULT_LANG }}"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ DEFAULT_LANG }}"> <!--<![endif]-->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="{{ AUTHOR }}">
+
+    <meta name="description" content="Desenvolvedor Full Stack de Santos, São Paulo - Guilherme Toti">
+    <meta name="keywords" content="Programador, software engineer, php, python, react, full stack, guilherme toti">
+    <link rel="icon" href="{{ SITEURL }}/images/favicon.jpg">
+
+    {% if GOOGLE_SITE_VERIFICATION %}
+        <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}">
+    {% endif %}
+
+    <title>{{ SITENAME }}{% block title %}{% if SITESUBTITLE and SHOW_SITESUBTITLE_IN_HTML %} - {{ SITESUBTITLE }}{% endif %}{% endblock title %}</title>
+
+    {% if FEED_ALL_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+    {% endif %}
+    {% if FEED_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+    {% endif %}
+    {% if FEED_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_ATOM and category %}
+        <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_RSS and category %}
+        <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+    {% endif %}
+    {% if TAG_FEED_ATOM and tag %}
+        <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+    {% endif %}
+    {% if TAG_FEED_RSS and tag %}
+        <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+    {% endif %}
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.min.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,,800,900|Josefin+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/owl.theme.default.min.css">
+
+    <!-- magnific-popup CSS -->
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/magnific-popup.css">
+
+    <!-- Font Icon Core CSS -->
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/et-line.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/ionicons.min.css">
+
+    <!-- Core Style Css -->
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
+
+    <!--[if lt IE 9]-->
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/html5shiv.min.js"></script>
+    <!--[endif]-->
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {% block opengraph %}
+        {% for LOC in LOCALE %}
+            <meta property="og:locale" content="{{ LOC }}">
+        {% endfor %}
+        <meta property="og:site_name" content="{{ SITENAME }}">
+    {% endblock opengraph %}
+
+    {% include 'analytics.html' %}
+
+    </head>
+    <body>
+        <!-- ====== Preloader ======  -->
+        <div class="loading">
+            <div class="load-circle"></div>
+        </div>
+        <!-- ======End Preloader ======  -->
+
+        <!-- ====== button-top ======  -->
+        <div class="button-top" data-scroll-nav="0">
+            <span><i class="fa fa-angle-up" aria-hidden="true"></i></span>
+        </div>
+        <!-- ======End button-top ======  -->
+
+        <!-- ====== Navgition ======  -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-icon-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- logo -->
+                <a href="{{ SITEURL }}/">
+                    <div class="logo">
+                        <h1>{{ SITENAME }}</h1>
+                    </div>
+                </a>
+
+                </div>
+
+                <!-- Collect the nav links, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="nav-icon-collapse">
+                <!-- links -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ SITEURL }}/" {% if page_name == 'index'%} class="active"{% endif %}>Home</a></li>
+
+                    {% for title, link in MENUITEMS %}
+                        <li><a href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                        {% for p in pages %}
+                            <li><a href="{{ SITEURL }}/{{ p.url }}" {% if p == page %} class="active"{% endif %}>{{ p.title }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+            </nav>
+            <!-- ====== End Navgition ======  -->
+
+            <!--====== Header ======-->
+            <section class="sub-header">
+                <div class="container">
+                    <div class="v-middle">
+
+                        <!-- Caption -->
+                        <div class="caption text-center">
+                                <a href="{{ SITEURL }}/"><h1 class="mb-15">{{ SITENAME }}</h1></a>
+                            <h6>{{ SITESUBTITLE }}</h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--====== End Header ======-->
+
+
+            <!--====== mp-blog ======-->
+            <section class="mp-blog section-padding">
+                <div class="container">
+                    {% block content_wrapper %}{% endblock content_wrapper %}
+                </div>
+            </section>
+            <!--====== End mp-blog ======-->
+
+            <!-- ====== Footer ======  -->
+            <footer class="gray">
+                <p>Guilherme Toti &copy; Blog powered by <a href="http://getpelican.com" target="_blank">Pelican</a></p>
+            </footer>
+            <!-- ====== End Footer ======  -->
+
+            <!-- jQuery -->
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery-3.0.0.min.js"></script>
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery-migrate-3.0.0.min.js"></script>
+
+            <!-- bootstrap -->
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
+
+            <!-- scrollIt -->
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/scrollIt.min.js"></script>
+
+            <!-- magnific-popup -->
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.magnific-popup.min.js"></script>
+
+            <!-- owl carousel -->
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/owl.carousel.min.js"></script>
+
+            <!-- stellar js -->
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.stellar.min.js"></script>
+
+            <!-- typed js -->
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/typed.js"></script>
+
+            <!-- isotope.pkgd.min js -->
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/isotope.pkgd.min.js"></script>
+
+            <!-- validator js -->
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/validator.js"></script>
+
+            <!-- custom script -->
+            <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/custom.js"></script>
+      
+    {% include 'disqus_script.html' %}
+    </body>
+</html>

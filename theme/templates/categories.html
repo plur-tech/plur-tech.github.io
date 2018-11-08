@@ -1,0 +1,16 @@
+﻿{% extends "two_columns.html" %}
+
+{% block title %} - Categories{% endblock title %}
+
+{% block page_breadcrumbs %}
+<li>Categories</li>
+{% endblock page_breadcrumbs %}
+
+{% block content %}
+<h4 class="head-left">Categories</h4>
+<ul>
+{% for category, articles in categories %}
+    <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %}

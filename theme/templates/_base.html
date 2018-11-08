@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>{% block title %}PLUR{% endblock title %}</title>
+		<meta name="description" content="{% block description %}Software House - The CTO for your business, Tailor-made software{% endblock description %}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="google-site-verification" content="CbwFMFTKjvvj_sTJY6LtVOC6CGOO8ItBNRYtw8vReh8" />
+		
+		<link rel="icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/plur_homepage/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="{{ SITEURL }}/images/apple-touch-icon-precomposed.png">
+		
+		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/plur_homepage/css/uikit.min.css" />
+		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/plur_homepage/css/style.css" >
+		
+		<meta property="og:title" content="PLUR" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://plur.tech/{{ THEME_STATIC_DIR }}/plur_homepage/images/og_image.png"/>
+		<meta property="og:image:width" content="1000" />
+		<meta property="og:image:height" content="1000" />
+		<meta property="og:url" content="https://plur.tech" />
+		<meta property="og:description" content="Software House - The CTO for your business, Tailor-made software" />
+
+		{% block ga %}
+  			{% include "ga.html" %}
+		{% endblock ga %}
+	</head>
+	<body class="">
+		<div class="page-wrapper">
+			{% block body_content %}{% endblock body_content %}
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/plur_homepage/js/uikit.min.js"></script>
+		<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/plur_homepage/js/uikit-icons.min.js"></script>
+		{% block extra_scripts %}{% endblock extra_scripts %}
+		<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/plur_homepage/js/init.js"></script>
+	</body>
+</html>
