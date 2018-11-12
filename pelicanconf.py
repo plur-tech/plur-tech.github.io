@@ -35,7 +35,6 @@ SOCIAL = (
     ('twitter', 'https://twitter.com/PLUR_technology'),
     ('facebook', 'https://www.facebook.com/plur.tech/'),
     ('linkedin', 'https://www.linkedin.com/company/plur-tech/'),
-    ('github', ''),
 )
 
 DEFAULT_PAGINATION = 8
