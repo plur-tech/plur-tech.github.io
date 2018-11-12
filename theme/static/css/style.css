@@ -70,7 +70,7 @@ p {
   left: calc(50% - 20px);
   height: 1px;
   width: 40px;
-  background: #FF305B;
+  background: #0b8fe8;
   z-index: 2;
 }
 
@@ -86,7 +86,7 @@ p {
   position: absolute;
   bottom: -1px;
   left: 0;
-  background: #FF305B;
+  background: #0b8fe8;
   height: 1px;
   width: 70px;
 }
@@ -108,7 +108,7 @@ p {
   text-align: center;
   font-size: 16px;
   color: #fff;
-  background: #FF305B;
+  background: #0b8fe8;
   z-index: 99999999;
   opacity: .9;
   -webkit-transition: all .5s;
@@ -153,8 +153,8 @@ p {
 }
 .butn {
   padding: 8px 28px;
-  border: 1px solid #FF305B;
-  color: #FF305B;
+  border: 1px solid #0b8fe8;
+  color: #0b8fe8;
   border-radius: 30px;
   font-size: 13px;
   font-weight: 700;
@@ -163,21 +163,21 @@ p {
 }
 
 .butn-bg {
-  background: #FF305B;
+  background: #0b8fe8;
   color: #fff;
 }
 .butn-bg:hover {
   background: transparent;
-  color: #FF305B;
+  color: #0b8fe8;
 }
 
 .butn-bord:hover {
-  background: #FF305B;
+  background: #0b8fe8;
   color: #fff;
 }
 
 /* -------------------------------------------------------
-                     Navbar 
+                     Navbar
 -------------------------------------------------------- */
 .navbar-default {
   padding: 20px 0 30px;
@@ -200,7 +200,7 @@ p {
   content: '';
   width: 50px;
   height: 4px;
-  background: #FF305B;
+  background: #0b8fe8;
   position: absolute;
   bottom: -30px;
   left: calc(50% - 25px);
@@ -253,7 +253,7 @@ p {
 }
 
 /* -------------------------------------------------------
-                     Header 
+                     Header
 -------------------------------------------------------- */
 .header {
   height: 100vh;
@@ -348,7 +348,7 @@ p {
 }
 
 /* -------------------------------------------------------
-                     Hero 
+                     Hero
 -------------------------------------------------------- */
 .hero {
   padding-bottom: 60px;
@@ -362,7 +362,7 @@ p {
   line-height: 1.8;
 }
 .hero .hero-content .info h5 span {
-  color: #FF305B;
+  color: #0b8fe8;
   padding-right: 10px;
 }
 .hero .hero-content .info h5 span .icon {
@@ -393,7 +393,7 @@ p {
   height: 100%;
   position: absolute;
   left: 0;
-  background: #FF305B;
+  background: #0b8fe8;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -409,7 +409,7 @@ p {
 }
 
 /* -------------------------------------------------------
-                     Resume 
+                     Resume
 -------------------------------------------------------- */
 .resume {
   border-top: 1px solid #f4f4f4;
@@ -443,7 +443,7 @@ p {
   background: #121212;
 }
 .resume .tabs-icon .active span {
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .resume .resume-content .main-icon {
   width: 50px;
@@ -451,7 +451,7 @@ p {
   line-height: 50px;
   border-radius: 50%;
   border: 2px solid #eee;
-  color: #FF305B;
+  color: #0b8fe8;
   font-size: 25px;
   margin: 0 auto 50px;
   text-align: center;
@@ -479,7 +479,7 @@ p {
   font-size: 11px;
   font-weight: 600;
   padding: 7px 18px;
-  background: #FF305B;
+  background: #0b8fe8;
   color: #fff;
   border-radius: 20px;
   position: relative;
@@ -489,7 +489,7 @@ p {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #FF305B;
+  background: #0b8fe8;
   position: absolute;
   top: 4px;
   right: -19px;
@@ -515,7 +515,7 @@ p {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 1px solid #FF305B;
+  border: 1px solid #0b8fe8;
   background: #fff;
   position: absolute;
   top: 0px;
@@ -537,7 +537,7 @@ p {
 }
 
 /* -------------------------------------------------------
-                     Numbers 
+                     Numbers
 -------------------------------------------------------- */
 .numbers {
   background-image: url(../img/1.jpg);
@@ -565,7 +565,7 @@ p {
 }
 .numbers .item .icon {
   font-size: 35px;
-  color: #FF305B;
+  color: #0b8fe8;
   margin-bottom: 15px;
 }
 .numbers .item h5 {
@@ -579,14 +579,14 @@ p {
 }
 
 /* -------------------------------------------------------
-                     Services 
+                     Services
 -------------------------------------------------------- */
 .services .item {
   padding: 30px;
 }
 .services .item .icon {
   font-size: 35px;
-  color: #FF305B;
+  color: #0b8fe8;
   margin-bottom: 15px;
 }
 .services .item h6 {
@@ -604,7 +604,7 @@ p {
 }
 
 /* -------------------------------------------------------
-                     Clients 
+                     Clients
 -------------------------------------------------------- */
 .clients {
   background-image: url(../img/2.jpg);
@@ -629,7 +629,7 @@ p {
 .clients .icon {
   font-size: 40px;
   margin-bottom: 30px;
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .clients .client-item {
   color: #fff;
@@ -651,7 +651,7 @@ p {
   margin-bottom: 30px;
   font-size: 12px;
   letter-spacing: 1px;
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .clients .owl-theme .owl-dots .owl-dot span {
   background: transparent;
@@ -659,12 +659,12 @@ p {
 }
 .clients .owl-theme .owl-dots .owl-dot.active span,
 .clients .owl-theme .owl-dots .owl-dot:hover span {
-  background: #FF305B;
-  border-color: #FF305B;
+  background: #0b8fe8;
+  border-color: #0b8fe8;
 }
 
 /* -------------------------------------------------------
-                     Portfolio 
+                     Portfolio
 -------------------------------------------------------- */
 .portfolio {
   overflow: hidden;
@@ -685,7 +685,7 @@ p {
   content: "";
   width: 1px;
   height: 100%;
-  background: #FF305B;
+  background: #0b8fe8;
   position: absolute;
   left: 50%;
   top: 0;
@@ -694,7 +694,7 @@ p {
   transition: all .4s;
 }
 .portfolio .filtering .active {
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .portfolio .filtering .active:after {
   left: 0;
@@ -749,7 +749,7 @@ p {
   cursor: pointer;
 }
 .portfolio .item-img .icon:hover {
-  background: #FF305B;
+  background: #0b8fe8;
   color: #fff;
 }
 .portfolio .item-img-overlay {
@@ -782,7 +782,7 @@ p {
 }
 
 /* -------------------------------------------------------
-                     Hire 
+                     Hire
 -------------------------------------------------------- */
 .hire {
   background-image: url(../img/3.jpg);
@@ -821,8 +821,8 @@ p {
   font-size: 16px;
   padding: 8px 28px;
   margin: 5px;
-  background: #FF305B;
-  border: 1px solid #FF305B;
+  background: #0b8fe8;
+  border: 1px solid #0b8fe8;
   border-radius: 30px;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -835,7 +835,7 @@ p {
 }
 
 /* -------------------------------------------------------
-                     Blog 
+                     Blog
 -------------------------------------------------------- */
 .blog .item .img-post {
   position: relative;
@@ -856,7 +856,7 @@ p {
 }
 .blog .item .cont-post .tag {
   margin-bottom: 30px;
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .blog .item .cont-post h6 {
   font-size: 18px;
@@ -864,8 +864,8 @@ p {
 }
 .blog .item .cont-post .botn {
   margin-top: 30px;
-  background: #FF305B;
-  border: 1px solid #FF305B;
+  background: #0b8fe8;
+  border: 1px solid #0b8fe8;
   border-radius: 30px;
   color: #fff;
   padding: 10px 25px;
@@ -874,7 +874,7 @@ p {
 }
 .blog .item .cont-post .botn:hover {
   background: transparent;
-  color: #FF305B;
+  color: #0b8fe8;
 }
 
 .posts {
@@ -919,7 +919,7 @@ p {
   padding: 30px;
   margin: 10px auto;
   background: #f7f7f7;
-  border-left: 4px solid #FF305B;
+  border-left: 4px solid #0b8fe8;
 }
 .posts .item .content .mor-inf {
   margin-bottom: 30px;
@@ -933,15 +933,15 @@ p {
   letter-spacing: 1px;
 }
 .posts .item .content .mor-inf li a:hover {
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .posts .item .content .mor-inf li .icon {
   margin-right: 5px;
 }
 .posts .item .content .more {
   padding: 12px 30px;
-  background: #FF305B;
-  border: 1px solid #FF305B;
+  background: #0b8fe8;
+  border: 1px solid #0b8fe8;
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
@@ -951,7 +951,7 @@ p {
 }
 .posts .item .content .more:hover {
   background: transparent;
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .posts .item .content .share .shar {
   border: 1px solid #ccc;
@@ -969,7 +969,7 @@ p {
   line-height: 30px;
 }
 .posts .item .content .share span:hover {
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .posts .comm {
   padding-bottom: 30px;
@@ -1018,8 +1018,8 @@ p {
   max-height: 160px;
 }
 .posts .lev-comm input[type="submit"] {
-  background: #FF305B;
-  border-color: #FF305B;
+  background: #0b8fe8;
+  border-color: #0b8fe8;
   color: #fff;
   font-size: 14px;
   text-transform: uppercase;
@@ -1029,7 +1029,7 @@ p {
 }
 .posts .lev-comm input[type="submit"]:hover {
   background: transparent;
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .posts .numb span {
   padding: 10px 16px;
@@ -1042,12 +1042,12 @@ p {
   transition: all .5s;
 }
 .posts .numb span:hover {
-  background: #FF305B;
-  border-color: #FF305B;
+  background: #0b8fe8;
+  border-color: #0b8fe8;
   color: #fff;
 }
 .posts .numb .active {
-  border-color: #FF305B;
+  border-color: #0b8fe8;
   color: #555;
 }
 
@@ -1109,8 +1109,8 @@ p {
   transition: all .5s;
 }
 .side-bar .widget .follow span:hover {
-  border-color: #FF305B;
-  background: #FF305B;
+  border-color: #0b8fe8;
+  background: #0b8fe8;
   color: #fff;
 }
 .side-bar .widget .lpost .item {
@@ -1148,7 +1148,7 @@ p {
   left: 0;
   top: 1px;
   font-family: "FontAwesome";
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .side-bar .widget .catg h5 span {
   float: right;
@@ -1163,8 +1163,8 @@ p {
   transition: all .5s;
 }
 .side-bar .widget .tags span:hover {
-  background: #FF305B;
-  border-color: #FF305B;
+  background: #0b8fe8;
+  border-color: #0b8fe8;
   color: #fff;
 }
 
@@ -1193,7 +1193,7 @@ p {
 }
 
 /* -------------------------------------------------------
-                     Contact 
+                     Contact
 -------------------------------------------------------- */
 .contact {
   background-image: url(../img/4.jpg);
@@ -1237,8 +1237,8 @@ p {
   height: 160px;
 }
 .contact .form input[type="submit"] {
-  border: 1px solid #FF305B;
-  background: #FF305B;
+  border: 1px solid #0b8fe8;
+  background: #0b8fe8;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1247,7 +1247,7 @@ p {
 }
 .contact .form input[type="submit"]:hover {
   background: transparent;
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .contact .info {
   text-align: center;
@@ -1262,7 +1262,7 @@ p {
 .contact .info .item .icon {
   font-size: 30px;
   margin-bottom: 20px;
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .contact .info .item h6 {
   font-family: "Muli", sans-serif;
@@ -1279,7 +1279,7 @@ p {
   margin: 0 15px;
 }
 .contact .info .social-icon span:hover {
-  color: #FF305B;
+  color: #0b8fe8;
 }
 .contact .copy {
   margin-top: 80px;

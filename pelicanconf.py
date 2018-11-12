@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Przemysław Łada'
-SITEDESCRIPTION = 'technology, programming, studies and random stuff'
-SITESUBTITLE = 'technology, programming, studies and random stuff'
+AUTHOR = 'PLUR'
+SITEDESCRIPTION = 'Technology, programming, management and random stuff'
+SITESUBTITLE = 'Technology, programming, management and random stuff'
 SITENAME = 'PLUR'
 SITEURL = ''
 COPYRIGHT = 'PLUR'
@@ -32,10 +32,10 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 
 # Social widget
 SOCIAL = (
-    ('github', 'https://github.com/guilherme-toti'),
-    ('facebook', 'http://www.facebook.com/guilhermetoti'),
-    ('instagram', 'https://www.instagram.com/guilherme_toti'),
-    ('youtube', 'https://www.youtube.com/guilhermetoti'),
+    ('twitter', 'https://twitter.com/PLUR_technology'),
+    ('facebook', 'https://www.facebook.com/plur.tech/'),
+    ('linkedin', 'https://www.linkedin.com/company/plur-tech/'),
+    ('github', ''),
 )
 
 DEFAULT_PAGINATION = 8
@@ -45,7 +45,8 @@ DEFAULT_PAGINATION = 8
 
 THEME = 'theme'
 
-SIDEBAR_DISPLAY = ['categories', 'tags', 'social']
+# SIDEBAR_DISPLAY = ['categories', 'tags', 'social']
+SIDEBAR_DISPLAY = ['tags', 'social']
 INDEX_SAVE_AS = 'blog.html'
 
 MENUITEMS = (
