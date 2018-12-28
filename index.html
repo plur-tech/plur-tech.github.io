@@ -1,173 +1,836 @@
-﻿<!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
-<!--<![endif]-->
+<!DOCTYPE html>
+<html>
 	<head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="author" content="Przemysław Łada">
-
-
-        <title>PLUR</title>
-
-            <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PLUR Full Atom Feed" />
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="/theme/css/style.css">
-
-        <!-- Custom CSS -->
-        	<link rel="stylesheet" href="/theme/css/colors/blue.css" id="colors">
-
-        <!-- Code highlight color scheme -->
-            <link href="/theme/css/code_blocks/darkly.css" rel="stylesheet">
-
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-                <meta property="og:locale" content="">
-		<meta property="og:site_name" content="PLUR">
-	</head>
-	<body>
-		<header id="header">
-			<!-- Container -->
-			<div class="container">
-				<!-- Logo / Mobile Menu -->
-				<div class="five columns">
-					<div id="textlogo">
-						<h1><a href="/">PLUR</a></h1>
-					</div>
-				</div>
-						<!-- Navigation
-				================================================== -->
-				<div class="eleven columns">
-
-					<nav id="navigation" class="menu">
-						<ul id="responsive">
-
-							<li><a href="/">Home</a></li>
-
-
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<!-- Container / End -->
-		</header>
-		<!-- Header / End -->
-
-		<!-- Breadcrumbs Container-->
-		<div id="content-wrapper">
-			<section id="titlebar">
-				<!-- Container -->
-				<div class="container">
-				<div class="thirteen columns">
-					<nav id="breadcrumbs">
-						<ul>
-							<li>You are here:</li>
-							<li><a href="/">Home</a></li>
-						</ul>
-					</nav>
-				</div>
-				</div>
-				<!-- Container / End -->
-			</section>
-
-			<div class="container">
-	<div class="twelve alt columns">
-		<!-- Post -->
-		<article class="post medium">
-			<div class="twelve columns">
-				<section class="post-content">
-					<header class="meta">
-						<h2><a href="/my-first-article.html" rel="bookmark" title="Permalink to My first Article">My first Article</a></h2>
-						<ul>
-							<li>By <a href="/author/przemyslaw-lada.html">Przemysław Łada</a></li>
-							<li>Mon 05 November 2018</li>
-							<li><a href="/category/python.html">Python</a></li>
-						</ul>
-					</header>
-					<p>
-							<p>My first article about python programing language</p>
-	        		</p>
-					<a href="/my-first-article.html" class="button color">Read More</a>
-				</section>
-			</div>
-			<div class="clearfix"></div>
-		</article>
-		<!-- Post -->
-		<article class="post medium">
-			<div class="twelve columns">
-				<section class="post-content">
-					<header class="meta">
-						<h2><a href="/my-first-review.html" rel="bookmark" title="Permalink to My First Review">My First Review</a></h2>
-						<ul>
-							<li>By <a href="/author/przemyslaw-lada.html">Przemysław Łada</a></li>
-							<li>Fri 03 December 2010</li>
-							<li><a href="/category/review.html">Review</a></li>
-						</ul>
-					</header>
-					<p>
-							<p>Following is a review of my favorite mechanical keyboard.</p>
-	        		</p>
-					<a href="/my-first-review.html" class="button color">Read More</a>
-				</section>
-			</div>
-			<div class="clearfix"></div>
-		</article>
-
-	<!-- Pagination -->
-	<nav class="pagination">
-		<ul>
-			<li>
-			</li>
-			<!-- Page 1 / 1 -->
-		</ul>
-		<div class="clearfix"></div>
-	</nav>
-	</div>
-
-	<!-- Sidebar -->
-	<div class="four columns">
-
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>PLUR</title>
+		<meta name="description" content="Software House - The CTO for your business, Tailor-made software" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="google-site-verification" content="CbwFMFTKjvvj_sTJY6LtVOC6CGOO8ItBNRYtw8vReh8" />
 		
-	</div>
-			</div>
-			<!-- Container / End -->
-		</div>
-		<!-- Content Wrapper / End -->
+		<link rel="icon" href="/theme/plur_homepage/images/favicon.ico">
+    	<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+		
+		<link rel="stylesheet" href="/theme/plur_homepage/css/uikit.min.css" />
+		<link rel="stylesheet" href="/theme/plur_homepage/css/style.css" >
+		
+		<meta property="og:title" content="PLUR" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://plur.tech/theme/plur_homepage/images/og_image.png"/>
+		<meta property="og:image:width" content="1000" />
+		<meta property="og:image:height" content="1000" />
+		<meta property="og:url" content="https://plur.tech" />
+		<meta property="og:description" content="Software House - The CTO for your business, Tailor-made software" />
 
-		<div id="footer-bottom">
-			<!-- Container -->
-			<div class="container">
-				<div class="eight columns">&copy;  || Blog powered by <a href="http://getpelican.com">Pelican</a></div>
-					<div class="eight columns">
-						<ul class="social-icons-footer">
-								<li>
-									<a href="#" class="tooltip top" title="You can add links in your config file">
-										<i class="icon-you can add links in your config file"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltip top" title="Another social link">
-										<i class="icon-another social link"></i>
-									</a>
-								</li>
-							<li><a href="/feeds/all.atom.xml" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>
-						</ul>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112169579-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112169579-1');
+</script>	</head>
+	<body class="">
+		<div class="page-wrapper">
+	<div class="start-section height-100vh uk-section-secondary uk-section uk-flex uk-flex-center uk-flex-middle uk-position-relative">
+		<div class="uk-position-cover" id="particles-js"></div>
+		<img src="/theme/plur_homepage/images/logo_white.png" alt="Company_Logo" class="uk-width-1-2 uk-width-1-3@m uk-position-z-index no-pointer-events">
+	</div>
+
+	<div class="mission-statement-section uk-section uk-section-primary">
+		<div class="uk-container uk-text-center">
+			<h2 uk-scrollspy="cls: uk-animation-fade">Using innovation and&nbsp;technology to grow your business.</h2>
+		</div>
+	</div>
+
+	<div class="offer-section uk-section">
+		<div class="uk-container">
+			<div class="uk-text-center">
+				<h1>What can we do for you?</h1>
+			</div>
+			<div class="uk-container uk-container-small uk-text-center">
+				<p class="text-light uk-text-large">We improve businesses every day. By using our skills and&nbsp;experience we create tailor-made solutions. As&nbsp;CTO we are helping businesses in&nbsp;which we believe.</p>
+			</div>
+
+			<div class="uk-flex uk-flex-wrap uk-flex-middle uk-flex-center uk-width-1-1 uk-child-width-1-1 uk-child-width-1-2@s uk-margin">
+				<div class="uk-card uk-card-body">
+            <h3 class="uk-card-title">Software</h3>
+            <p class="text-light">We bring your ideas into software products tailored exclusively for your business goals. Backend and&nbsp;frontend, web and&nbsp;mobile, cloud and&nbsp;dedicated servers, development and&nbsp;design, UI and&nbsp;UX - we cover all of&nbsp;that. Using best practices and&nbsp;out&nbsp;of&nbsp;the&nbsp;box thinking we ship comprehensive, secure and&nbsp;perfectly designed solutions to&nbsp;help your business grow. We love challenges! Any projects that need innovative approach are&nbsp;welcome.</p>
+        </div>
+        <div>
+        	<img src="/theme/plur_homepage/images/offer_software.png" alt="Software image" class="uk-width-1-1" uk-scrollspy="cls: uk-animation-fade; repeat: true;">
+        </div>
+			</div>
+
+			<div class="uk-flex uk-flex-wrap uk-flex-middle uk-flex-center uk-width-1-1 uk-child-width-1-1 uk-child-width-1-2@s uk-margin">
+				<div>
+					<div class="uk-width-1-1" id="research-particles-js" uk-scrollspy="cls: uk-animation-fade; repeat: true;"></div>
+        </div>
+				<div class="uk-card uk-card-body uk-flex-first uk-flex-last@s">
+            <h3 class="uk-card-title">Research & Scientific Knowledge</h3>
+            <p class="text-light">Software is not enough? We help with pleasure with any research part of your idea and&nbsp;with any&nbsp;part where the&nbsp;scientific knowledge is&nbsp;needed. Our team consists of&nbsp;professionals that graduate great universities. Furthermore we cooperate with PhD students from Warsaw University of&nbsp;Technology. Fields in&nbsp;which we feel good: innovative software architecture, information retrieval, data analysis, optimalization, decision support systems and&nbsp;AI. Blockchain and&nbsp;smart contracts are&nbsp;our current point of interest.</p>
+        </div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="portfolio-section uk-section">
+		<div class="uk-container">
+
+			<div class="uk-text-center margin-bottom">
+				<h1 class="uk-visible@s">Recent projects</h1>
+				<h1 class="uk-hidden@s">Recent project</h1>
+			</div>
+
+			<div uk-slider>
+
+				<div class="uk-position-relative">
+
+						<div class="uk-slider-container">
+								<ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l" uk-height-match="target: .same-height">
+										<li>
+												<div class="margin-bottom uk-margin-small-left uk-margin-small-right uk-card uk-card-default uk-card-body uk-card-hover card-border-top card-border-top-hover">
+													<img src="/theme/plur_homepage/images/opinialekarska_logo.png" class="uk-margin-bottom max-height-equal-h3">
+													<div class="uk-text-left same-height">
+														<p class="text-light uk-text-small"><span></span>Private Client Project</p>
+														<p class="text-light uk-text-small"><span></span>Telemedicine MVP platform for getting medicine second opinion. Project made for Eyemed company.</p>
+														<p class="text-light uk-text-small uk-text-bottom unselectable"><span></span><span class="uk-text-bold"># Web Development</span>, Frontend, Backend, Python, Docker</p>
+													</div>
+													<div class="button-container">
+														<button class="uk-button uk-button-default uk-margin-small-right uk-width-1-1" type="button" uk-toggle="target: #opinialekarska-modal">More</button>
+													</div>
+												</div>
+										</li>
+										<li>
+												<div class="margin-bottom uk-margin-small-left uk-margin-small-right uk-card uk-card-default uk-card-body uk-card-hover card-border-top card-border-top-hover">
+													<h3 class="uk-card-title">CCTrading <span uk-icon="bolt"></span></h3>
+													<div class="uk-text-left same-height">
+														<p class="text-light uk-text-small"><span></span>Co-Founder</p>
+														<p class="text-light uk-text-small"><span></span>Crypto-currencies trading decision support system. Project involve scraping, data analysis, optimalization and AI.</p>
+														<p class="text-light uk-text-small uk-text-bottom"><span></span><span class="uk-text-bold"># Web Scraping</span>, Cryptocurrencies, REST API, Python, Docker</p>
+													</div>
+													<div class="button-container">
+														<button class="uk-button uk-button-default uk-margin-small-right uk-width-1-1" type="button" uk-toggle="target: #cctrading-modal">More</button>
+													</div>
+												</div>
+										</li>
+										<li>
+													<div class="margin-bottom uk-margin-small-left uk-margin-small-right uk-card uk-card-default uk-card-body uk-card-hover card-border-top card-border-top-hover">
+														<img src="/theme/plur_homepage/images/syd_logo.png" class="uk-margin-bottom max-height-equal-h3">
+														<div class="uk-text-left same-height">
+															<p class="text-light uk-text-small"><span></span>Co-Founder</p>
+															<p class="text-light uk-text-small"><span></span>Customizable e-commerce platform generator for selling prints. Project involve web development and mailing.</p>
+															<p class="text-light uk-text-small uk-text-bottom"><span></span><span class="uk-text-bold"># E-commerce</span>, Frontend, Backend, DevOps, Mailing, Docker</p>
+														</div>
+														<div class="button-container">
+															<button class="uk-button uk-button-default uk-margin-small-right uk-width-1-1" type="button" uk-toggle="target: #syd-modal">More</button>
+														</div>
+													</div>
+										</li>
+										<li>
+													<div class="margin-bottom uk-margin-small-left uk-margin-small-right uk-card uk-card-default uk-card-body uk-card-hover card-border-top card-border-top-hover">
+														<img src="/theme/plur_homepage/images/cezao_logo.png" class="uk-margin-bottom max-height-equal-h3">
+														<div class="uk-text-left same-height">
+															<p class="text-light uk-text-small"><span></span>CTO</p>
+															<p class="text-light uk-text-small"><span></span>E-commerce platform for education sector. We care for platform backend and connection between third-party sides.</p>
+															<p class="text-light uk-text-small uk-text-bottom"><span></span><span class="uk-text-bold"># E-commerce</span>, Backend, REST API, DevOps, Mailing</p>
+														</div>
+														<div class="button-container">
+															<button class="uk-button uk-button-default uk-margin-small-right uk-width-1-1" type="button" uk-toggle="target: #cezao-modal">More</button>
+														</div>
+													</div>
+										</li>
+										<li>
+													<div class="margin-bottom uk-margin-small-left uk-margin-small-right uk-card uk-card-default uk-card-body uk-card-hover card-border-top card-border-top-hover">
+														<h3 class="uk-card-title"><span></span>Indoor Localization</h3>
+														<div class="uk-text-left same-height">
+															<p class="text-light uk-text-small"><span></span>Research</p>
+															<p class="text-light uk-text-small"><span></span>Mobile indoor Wi-Fi localization research. Project involved scientific research and implementing innovative solution.</p>
+															<p class="text-light uk-text-small uk-text-bottom"><span></span><span class="uk-text-bold"># Research</span>, Bayesian Filter, Wi-Fi, Localization, Android</p>
+														</div>
+														<div class="button-container">
+															<button class="uk-button uk-button-default uk-margin-small-right uk-width-1-1" type="button" uk-toggle="target: #indoorlocalization-modal">More</button>
+														</div>
+													</div>
+										</li>
+										<li>
+													<div class="margin-bottom uk-margin-small-left uk-margin-small-right uk-card uk-card-default uk-card-body uk-card-hover card-border-top card-border-top-hover">
+														<h3 class="uk-card-title"><span></span>Sentiment Analysis</h3>
+														<div class="uk-text-left same-height">
+															<p class="text-light uk-text-small"><span></span>Research</p>
+															<p class="text-light uk-text-small"><span></span>Sentiment analysis of New York Times articles. Project involved scrapping, data analysis, report.</p>
+															<p class="text-light uk-text-small uk-text-bottom"><span></span><span class="uk-text-bold"># Data Analysis</span>, Data Visualization, Data Scraping, Python</p>
+														</div>
+														<div class="button-container">
+															<button class="uk-button uk-button-default uk-margin-small-right uk-width-1-1" type="button" uk-toggle="target: #sentimentanalysis-modal">More</button>
+														</div>
+													</div>
+										</li>
+										<li>
+													<div class="margin-bottom uk-margin-small-left uk-margin-small-right uk-card uk-card-default uk-card-body uk-card-hover card-border-top card-border-top-hover">
+														<h3 class="uk-card-title"><span></span>Reaction Prediction</h3>
+														<div class="uk-text-left same-height">
+															<p class="text-light uk-text-small"><span></span>Research</p>
+															<p class="text-light uk-text-small"><span></span>Predicting positive or negative reaction for posted photo on Instagram. Project involved machine learning and web crawling.</p>
+															<p class="text-light uk-text-small uk-text-bottom"><span></span><span class="uk-text-bold"># Machine Learning</span>, Data Scraping, Python</p>
+														</div>
+														<div class="button-container">
+															<button class="uk-button uk-button-default uk-margin-small-right uk-width-1-1" type="button" uk-toggle="target: #reactionprediction-modal">More</button>
+														</div>
+													</div>
+										</li>
+										<li>
+													<div class="margin-bottom uk-margin-small-left uk-margin-small-right uk-card uk-card-default uk-card-body uk-card-hover card-border-top card-border-top-hover">
+														<h3 class="uk-card-title"><span></span>Location Index</h3>
+														<div class="uk-text-left same-height">
+															<p class="text-light uk-text-small"><span></span>Private Client Project</p>
+															<p class="text-light uk-text-small"><span></span>Automatic analysis of the city data. Finding locations that are very attractive for apartment and ground sellers.</p>
+															<p class="text-light uk-text-small uk-text-bottom"><span></span><span class="uk-text-bold"># Data Visualization</span>, Data Analysis, Data Scraping, Python</p>
+														</div>
+														<div class="button-container">
+															<button class="uk-button uk-button-default uk-margin-small-right uk-width-1-1" type="button" uk-toggle="target: #locationindex-modal">More</button>
+														</div>
+													</div>
+										</li>
+										<li>
+													<div class="margin-bottom uk-margin-small-left uk-margin-small-right uk-card uk-card-default uk-card-body uk-card-hover card-border-top card-border-top-hover">
+														<h3 class="uk-card-title"><span></span>Self Driving Car</h3>
+														<div class="uk-text-left same-height">
+															<p class="text-light uk-text-small"><span></span>Research</p>
+															<p class="text-light uk-text-small"><span></span>Project involved analyzing, finding and implementing best possible AI solution for problems of self driving car.</p>
+															<p class="text-light uk-text-small uk-text-bottom"><span></span><span class="uk-text-bold"># Machine Learning</span>, AI, Research, Java</p>
+														</div>
+														<div class="button-container">
+															<button class="uk-button uk-button-default uk-margin-small-right uk-width-1-1" type="button" uk-toggle="target: #selfdrivingcar-modal">More</button>
+														</div>
+													</div>
+										</li>
+										<li>
+													<div class="margin-bottom uk-margin-small-left uk-margin-small-right uk-card uk-card-default uk-card-body uk-card-hover card-border-top card-border-top-hover">
+														<h3 class="uk-card-title"><span></span>ICO Token</h3>
+														<div class="uk-text-left same-height">
+															<p class="text-light uk-text-small"><span></span>Technical Advisor</p>
+															<p class="text-light uk-text-small"><span></span>Project involved analyzing business concept, team capabilities to choose and explain proper technology for implementing ICO token.</p>
+															<p class="text-light uk-text-small uk-text-bottom"><span></span><span class="uk-text-bold"># Blockchain</span>, Consulting, Research</p>
+														</div>
+														<div class="button-container">
+															<button class="uk-button uk-button-default uk-margin-small-right uk-width-1-1" type="button" uk-toggle="target: #icotoken-modal">More</button>
+														</div>
+													</div>
+										</li>
+								</ul>
+						</div>
+				</div>
+
+				<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- MODALS -->
+	<div id="opinialekarska-modal" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+							<h2 class="uk-modal-title">Telemedicine Web Platform</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div uk-grid>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<p class="text-light">This project involved developing Django prototype platform for patients which want to get second medical opinion before their important medical decisions. Prototype designed in a way to build a production version on its basis. The client needed whole system architecture project and fully working prototype consistent with that architecture for easily improvements implementation.</p>
+							<p class="text-light">Responsibilities:</p>
+							<ul>
+								<li class="text-light">creating whole system architecture,</li>
+								<li class="text-light">creating Sketch UX wireframes,</li>
+								<li class="text-light">implementing front-end based on PSD files,</li>
+								<li class="text-light">designing database structure to keep doctor and clinic profiles and to manage conversation between patient and doctor,</li>
+								<li class="text-light">implementing Django back-end.</li>
+							</ul>
+							<p class="text-light">Technology stack used:</p>
+							<ul>
+								<li class="text-light">Sketch</li>
+								<li class="text-light">Django</li>
+								<li class="text-light">Bootstrap</li>
+								<li class="text-light">PostreSQL</li>
+								<li class="text-light">HTML5, CSS3, JS, jQuery</li>
+								<li class="text-light">Bitbucket</li>
+							</ul>
+							<p class="text-light">Project successfully created in less than 3 months.</p>
+							<p class="text-light">Current state: client discussed idea with potential customers, project paused - waiting for investor.</p>
+						</div>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<img src="/theme/plur_homepage/images/portfolio/opinia.jpg">
+							<p class="text-light uk-text-small">Landing page.</p>
+							<img src="/theme/plur_homepage/images/portfolio/opinia2.png">
+							<p class="text-light uk-text-small">Doctor panel - enabling managing account, consultations with patient and calendar. Screenshot from staging test version.</p>
+						</div>
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
 					</div>
 			</div>
-			<!-- Container / End -->
-		</div>
-		<!-- Footer Bottom / End -->
+	</div>
 
-	<!-- Javascripts -->
-	<script src="/theme/js/jquery.min.js"></script>
+	<div id="cctrading-modal" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+							<h2 class="uk-modal-title">Crypto Trading Utility</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div uk-grid>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<p class="text-light">This project involved developing Docker based Python scripts for monitoring Twitter data and cryptocurrencies data for taking proper investment action. The aim of the project was to create script which is monitoring data, analyzing data, buying or selling cryptocurrencies on exchanges using REST API.</p>
+							<p class="text-light">Responsibilities:</p>
+							<ul>
+								<li class="text-light">creating scraper architecture,</li>
+								<li class="text-light">implementing Python scraper that collect data from social platforms like Twitter and from crypto-exchanges platforms,</li>
+								<li class="text-light">implementing Python script for cryptocurrencies trading (buying, selling, transferring),</li>
+								<li class="text-light">creating opportunities for the investor to view work results remotely.</li>
+							</ul>
+							<p class="text-light">Technology stack used:</p>
+							<ul>
+								<li class="text-light">Python</li>
+								<li class="text-light">Docker</li>
+								<li class="text-light">Logz.io with Kibana</li>
+								<li class="text-light">GitLab</li>
+							</ul>
+							<p class="text-light">Current state: project beta-version implemented and being tested on real market.</p>
+						</div>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<img src="/theme/plur_homepage/images/portfolio/cctrading.png">
+							<p class="text-light uk-text-small">Staging test version logs - remote access via Logz.io.</p>
+						</div>
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+					</div>
+			</div>
+	</div>
+
+	<div id="syd-modal" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+							<h2 class="uk-modal-title">SellYour.Design</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div uk-grid>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<p class="text-light">Project involved developing e-commerce platform generator and tailor-made template for easily creating e-commerce shops based on customizable template. Project also involved creating landing page, mailing, creating mail templates.</p>
+							<p class="text-light">Responsibilities:</p>
+							<ul>
+								<li class="text-light">creating landing page,</li>
+								<li class="text-light">developing graphic design,</li>
+								<li class="text-light">developing customizable frontend,</li>
+								<li class="text-light">developing Django e-commerce backend using Oscar framework,</li>
+								<li class="text-light">creating software architecture based on Docker containers prepared for establishing new shop platforms for each client (each client gets private shop on chosen subdomain),</li>
+								<li class="text-light">creating responsive mailing templates and utilities to run a mailing campaign.</li>
+							</ul>
+							<p class="text-light">Technology stack used:</p>
+							<ul>
+								<li class="text-light">Materialize (CSS framework)</li>
+								<li class="text-light">JavaScript, jQuery</li>
+								<li class="text-light">Django + Oscar (Django e-commerce framework)</li>
+								<li class="text-light">Postgress</li>
+								<li class="text-light">Docker-compose</li>
+								<li class="text-light">MJML : framework for responsive email templates</li>
+								<li class="text-light">BitBucket</li>
+							</ul>
+							<p class="text-light">After first market verification whole business idea changed and whole sales was transferred from individual shops to German eBay. Platform development was paused.</p>
+							<p><a href="https://sellyour.design/" target="_blank">https://sellyour.design/</a></p>
+						</div>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<img src="/theme/plur_homepage/images/portfolio/syd_top_view.png">
+							<p class="text-light uk-text-small">Landing page top view.</p>
+							<img src="/theme/plur_homepage/images/portfolio/syd_shop1.png">
+							<p class="text-light uk-text-small">Artist shop - product view : view shows possible customization.</p>
+							<img src="/theme/plur_homepage/images/portfolio/syd_shop2.jpg">
+							<p class="text-light uk-text-small">Artist shop - product view : view shows possible customization.</p>
+						</div>
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+					</div>
+			</div>
+	</div>
+
+	<div id="cezao-modal" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+							<h2 class="uk-modal-title">Cezao</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div uk-grid>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<p class="text-light">Project involved developing e-commerce platform for education sector. We care for platform backend and connection between third-party sides (product suppliers). During the project there were need for many scripts and utilities for mailing, for maintaining contact with the client, for controlling supply processes, warehouse and for collecting competition market data.</p>
+							<p class="text-light">Responsibilities:</p>
+							<ul>
+								<li class="text-light">creating e-commerce platform with high backend requirements and basic frontend,</li>
+								<li class="text-light">connecting platform with third-party APIs,</li>
+								<li class="text-light">shop synchronization with 20 different product suppliers,</li>
+								<li class="text-light">competition observing support system which react for any discount to set always lower price than anywhere else with margin keeping,</li>
+								<li class="text-light">sells process management for ordering products directly in producer then repack into one package ready to send,</li>
+								<li class="text-light">utility for mailing 20.000 mails per week with spam avoidance,</li>
+								<li class="text-light">Google Chrome Plugin for scrapping addresses of each educational facility in Poland (total 60k) and searching for public orders announcement,</li>
+								<li class="text-light">scripts and utilities supporting man’s work,</li>
+								<li class="text-light">devOps,</li>
+								<li class="text-light">being ready for any non-standard challenges requiring thinking outside the box.</li>
+							</ul>
+							<p class="text-light">Technology stack used:</p>
+							<ul>
+								<li class="text-light">Python</li>
+								<li class="text-light">JavaScript, jQuery</li>
+								<li class="text-light">Django + Oscar (Django e-commerce framework)</li>
+								<li class="text-light">Postgress</li>
+								<li class="text-light">Docker-compose</li>
+								<li class="text-light">MJML : framework for responsive email templates</li>
+								<li class="text-light">BitBucket</li>
+							</ul>
+							<p class="text-light">Project on the market, still growing, 3 co-founders, 4 full-time workers.</p>
+							<p><a href="https://www.cezao.pl/" target="_blank">https://www.cezao.pl/</a></p>
+						</div>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<img src="/theme/plur_homepage/images/portfolio/cezao1.png">
+							<p class="text-light uk-text-small">Main page shop. Basic frontend without graphic design.</p>
+							<img src="/theme/plur_homepage/images/portfolio/cezao2.png">
+							<p class="text-light uk-text-small">Basket view. Basic frontend without graphic design.</p>
+						</div>
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+					</div>
+			</div>
+	</div>
+
+	<div id="indoorlocalization-modal" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+							<h2 class="uk-modal-title">Indoor Localization</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div uk-grid>
+						<div class="uk-width-1-1 uk-width-2-3@m">
+							<p class="text-light">Project involved researching about available methods of indoor localization systems. The goal of the project was to localize the user inside the building. Localization should be made with regular smartphone and use existing Wi-Fi signals without the need to connect to any of them. Moreover solution cannot be based on adding any new devices to the building.</p>
+							<p class="text-light">Responsibilities:</p>
+							<ul>
+								<li class="text-light">researching existing solutions,</li>
+								<li class="text-light">developing innovative solution with highest possible accuracy level.</li>
+							</ul>
+							<p class="text-light">Technology stack used:</p>
+							<ul>
+								<li class="text-light">Python</li>
+								<li class="text-light">Android</li>
+							</ul>
+							<p class="text-light">Developed solution based on training pre-phase and modified Bayesian filter algorithm achieving 2 meters accuracy which is one of the highest results in that kind of approach. System is not good enough for commercial usage due to the insufficient hardware technology. Result presented at the university. Project will be scientifically described.</p>
+						</div>
+						<div class="uk-width-1-1 uk-visible@m uk-width-1-3@m">
+							<img src="/theme/plur_homepage/images/portfolio/indoor.png">
+						</div>
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+					</div>
+			</div>
+	</div>
+
+	<div id="sentimentanalysis-modal" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+							<h2 class="uk-modal-title">Sentiment Analysis</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div uk-grid>
+						<div class="uk-width-1-1 uk-width-2-3@m">
+							<p class="text-light">This project involved New York Times articles sentimental analysis. Main focus based on positiveness index across the world regions and correlation between specific authors and correlation between each regions.</p>
+							<p class="text-light">Responsibilities:</p>
+							<ul>
+								<li class="text-light">scraping data,</li>
+								<li class="text-light">analysing data,</li>
+								<li class="text-light">creating report for client.</li>
+							</ul>
+							<p class="text-light">Technology stack used:</p>
+							<ul>
+								<li class="text-light">Python with libraries NLTK, Scrapy, Selenium, Beautiful Soup</li>
+							</ul>
+							<p class="text-light">Project finished successfully.</p>
+							<p class="text-light">The curiosities which can be said publicly: almost 60% of all articles in the world between 2010 and 2016 year published on NYT have negative overtone. This result vary between different continents and countries but not as much to focus on that. Among authors that create highest number of articles that parameter is also similar, each author creates most negative than positive articles. But there is no author which is creating a lot of content which create only negative or only positive articles. Analyzing articles in which authors mentioned more than about one region shows that Australia is one of the most excluded continent in the NYT news.</p>
+						</div>
+						<div class="uk-width-1-1 uk-visible@m uk-width-1-3@m">
+							<img src="/theme/plur_homepage/images/portfolio/nyt.png">
+						</div>
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+					</div>
+			</div>
+	</div>
+
+	<div id="reactionprediction-modal" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+							<h2 class="uk-modal-title">Reaction Prediction</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div uk-grid>
+						<div class="uk-width-1-1 uk-width-2-3@m">
+							<p class="text-light">This project involved working on: web crawling, machine learning, web application.</p>
+							<p class="text-light">Main goal of the project was to predict positive or negative reaction for posted photo on Instagram. Whole focus was made on two big brands BMW and Nike and top products for BMW it was F30 and for Nike it was Airmax shoes. Positive means better than average, negative reaction means lower than average.</p>
+							<p class="text-light">Responsibilities:</p>
+							<ul>
+								<li class="text-light">choosing machine learning approach,</li>
+								<li class="text-light">choosing data which will be taken under consideration during deep network training,</li>
+								<li class="text-light">scrapping data from Instagram mostly via Instagram API but not only,</li>
+								<li class="text-light">preparing data for deep neural training process.</li>
+							</ul>
+							<p class="text-light">Technology stack used:</p>
+							<ul>
+								<li class="text-light">Python with libraries PyBrain, Beautiful Soup, Scrapy, Selenium</li>
+								<li class="text-light">Javascript</li>
+							</ul>
+							<p class="text-light">Chose to use deep neural networks and trained that network using:</p>
+							<ul>
+								<li class="text-light">historical images (about 60k)</li>
+								<li class="text-light">corresponding profiles rating based on number of followers, average likes on profile, number of connections</li>
+								<li class="text-light">corresponding reaction</li>
+							</ul>
+							<p class="text-light">Developed solution had got about 60% accuracy, so that can be implemented as a part for more complex decision supporting software. Project finished successfully.</p>
+						</div>
+						<div class="uk-width-1-1 uk-visible@m uk-width-1-3@m">
+							<img src="/theme/plur_homepage/images/portfolio/instagram.png">
+						</div>
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+					</div>
+			</div>
+	</div>
+
+	<div id="locationindex-modal" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+							<h2 class="uk-modal-title">Location Index</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div uk-grid>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<p class="text-light">Project involved scraping city public communication schedule, processing scrapped data with average walking speed. Main purpose was to calculate how far is it from any point to any point in the city if you are using public transport. That creates data that are very attractive for apartment and ground sellers.</p>
+							<p class="text-light">Web platform requirements:</p>
+							<ul>
+								<li class="text-light">responsive design,</li>
+								<li class="text-light">easy to use (easy to check time consumption index for any point in the city),</li>
+								<li class="text-light">protected against unauthorized users.</li>
+							</ul>
+							<p class="text-light">Responsibilities:</p>
+							<ul>
+								<li class="text-light">scrapping data,</li>
+								<li class="text-light">processing data,</li>
+								<li class="text-light">creating web app for client.</li>
+							</ul>
+							<p class="text-light">Technology stack used:</p>
+							<ul>
+								<li class="text-light">Python with libraries Beautiful Soup, Scrappy, Selenium</li>
+								<li class="text-light">Google Maps API</li>
+								<li class="text-light">HTML5, CSS3, JS, Bootstrap</li>
+								<li class="text-light">Docker</li>
+							</ul>
+							<p class="text-light">Project finished successfully in accordance with the guidelines.</p>
+						</div>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<img src="/theme/plur_homepage/images/portfolio/locationindex.png">
+							<p class="text-light uk-text-small">Example result for Warsaw city in Poland for starting point placed in the city center.</p>
+						</div>
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+					</div>
+			</div>
+	</div>
+
+	<div id="selfdrivingcar-modal" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+							<h2 class="uk-modal-title">Neural Network Research</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div uk-grid>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<p class="text-light">This project involved analyzing and finding best possible AI solution for problems of self driving car. That sentence is general, to be more specific there was the need to analyze how methods like SLFN, MLP, ELM or even more complex techniques like, Q-network and NEAT behave in self driving decision model. Different offline and online, approaches was analyzed to get the proper solution. Whole research was based on The Open Racing Car Simulator (TORCS).</p>
+							<p class="text-light">Responsibilities:</p>
+							<ul>
+								<li class="text-light">connecting to the TORCS API using Java,</li>
+								<li class="text-light">preparing Java script for taking neural network model for proper reactions (inputs from simulator sensors - outputs actions like: brake, angle of steering etc.),</li>
+								<li class="text-light">implementing Q-learning and NEAT approaches using Java to generate neural network model.</li>
+							</ul>
+							<p class="text-light">Technology stack used:</p>
+							<ul>
+								<li class="text-light">TORCS</li>
+								<li class="text-light">Java + Encog (ML Library)</li>
+								<li class="text-light">Python + PyBrain library</li>
+							</ul>
+							<p class="text-light">Every applied solution was successful. SNLF, MLP, and ELM was even able to generalize and perform better results than the original controller. Project finished successfully.</p>
+						</div>
+						<div class="uk-width-1-1 uk-width-1-2@m">
+							<img src="/theme/plur_homepage/images/portfolio/torcs.jpg">
+							<p class="text-light uk-text-small">The Open Racing Car Simulator.</p>
+						</div>
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+					</div>
+			</div>
+	</div>
+
+	<div id="icotoken-modal" class="uk-modal-container" uk-modal>
+			<div class="uk-modal-dialog">
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+					<div class="uk-modal-header">
+							<h2 class="uk-modal-title">Token for ICO</h2>
+					</div>
+					<div class="uk-modal-body">
+						<div uk-grid>
+						<div class="uk-width-1-1 uk-width-2-3@m">
+							<p class="text-light">This project involved analyzing business concept team capabilities and choosing and explaining proper technology for implementing ICO token.</p>
+							<p class="text-light">Responsibilities:</p>
+							<ul>
+								<li class="text-light">analyzing business concept and client team capabilities,</li>
+								<li class="text-light">researching and choosing suitable blockchain technology,</li>
+								<li class="text-light">creating implementation guidelines.</li>
+							</ul>
+							<p class="text-light">Findings that have been worked out with client:</p>
+							<ul>
+								<li class="text-light">Whole token issue equal 1.000.000.000.</li>
+								<li class="text-light">First 10.000.000 tokens for co-founders, token freeze for 1 year.</li>
+								<li class="text-light">10.000.000 tokens for pre sale.</li>
+								<li class="text-light">50.000.000 tokens for ICO.</li>
+								<li class="text-light">Rest of tokens for business partners and marketing issues.</li>
+								<li class="text-light">The service's profits will be automatically distributed between the token owners and other purposes e.g. charitable.</li>
+								<li class="text-light">Holders have the right to receive dividends, in the future the right to vote on matters that are important for the site.</li>
+							</ul>
+							<p class="text-light">Project finished successful. Recommended ERC20 standard for smart contract implementation based on Ethereum blockchain network. Implementation guideline prepared.</p>
+						</div>
+						<div class="uk-width-1-1 uk-visible@m uk-width-1-3@m">
+							<img src="/theme/plur_homepage/images/portfolio/icotoken.png">
+						</div>
+						</div>
+					</div>
+					<div class="uk-modal-footer uk-text-right">
+							<button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+					</div>
+			</div>
+	</div>
+	<!-- END MODALS -->
+
+	<div class="technology-section uk-section uk-section-secondary uk-padding uk-padding-remove-horizontal">
+		<div class="uk-container">
+
+			<div uk-slider="autoplay: true; autoplay-interval: 10; velocity: 0.1; pause-on-hover: false;">
+					<ul class="uk-slider-items uk-child-width-1-3 uk-child-width-1-4@s uk-child-width-1-6@m uk-grid">
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/docker.png" alt="Docker">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/python.png" alt="Python">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/kubernetes.png" alt="Kubernetes">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/django.png" alt="Django">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/react.png" alt="React">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/nodejs.png" alt="Node.JS">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/postgresql.png" alt="PostgreSQL">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/mongodb.png" alt="mongoDB">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/mysql.png" alt="MySQL">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/neo4j.png" alt="Neo4J">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/googlecloud.png" alt="Google Cloud">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/aws.png" alt="AWS">
+							</li>
+							<li>
+									<img src="/theme/plur_homepage/images/technologies/gitlab.png" alt="GitLab">
+							</li>
+					</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="testimonials-section uk-section">
+		<div class="uk-container">
+
+			<div class="uk-flex uk-flex-center">
+				<div class="uk-visible@s uk-width-1-4@s" uk-scrollspy="cls: uk-animation-slide-bottom;">
+					<div class="uk-margin-large-right">
+						<img src="/theme/plur_homepage/images/quote_top_left.svg" class="uk-width-1-1">
+					</div>
+				</div>
+				<div class="uk-width-1-1 uk-width-3-4@s uk-width-1-2@m">
+
+					<div class="uk-card uk-card-default uk-card-body">
+						<div uk-slider="autoplay: true; clsActivated: uk-transition-active;">
+								<ul class="uk-slider-items uk-child-width-1-1">
+										<li>
+												<article class="uk-comment uk-transition-fade">
+														<header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+																<div class="uk-width-auto">
+																		<img class="uk-comment-avatar" src="/theme/plur_homepage/images/testimonials/pawel_stepien.jpg" width="80" height="80" alt="">
+																</div>
+																<div class="uk-width-expand">
+																		<h4 class="uk-comment-title uk-margin-remove">Paweł Stępień</h4>
+																		<ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+																				<li>Co-Founder & PhD Student</li>
+																		</ul>
+																</div>
+														</header>
+														<div class="uk-comment-body">
+																<p class="text-light">PLUR vision is clear: bring innovative IT solutions into all business fields. It diversifies the risk and brings opportunities to look for synergy effect between markets. No matter what, company always means group of people willing to achieve same goal. PLUR gather highly ambitious, goal-oriented, selfdisciplined and passionate professionals. Together we can change the world!</p>
+														</div>
+												</article>
+										</li>
+										<li>
+												<article class="uk-comment uk-transition-fade">
+														<header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+																<div class="uk-width-auto">
+																		<img class="uk-comment-avatar" src="/theme/plur_homepage/images/testimonials/przemek_lada.jpeg" width="80" height="80" alt="">
+																</div>
+																<div class="uk-width-expand">
+																		<h4 class="uk-comment-title uk-margin-remove">Przemysław Łada</h4>
+																		<ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+																				<li>Co-Founder</li>
+																		</ul>
+																</div>
+														</header>
+														<div class="uk-comment-body">
+																<p class="text-light">Cocreating of Plur is highly exciting! We deal with project beginning from the idea to the implementation of working solution. That requires from us to specialize in many fields. We do full-stack development, product and graphic design, implementation and maintenance. Security and stability are of the utmost importance. Team members are involved on every stage of creation although everyone is specialist in his domain. Because of that everyone have deep understanding of creation process and real impact on project direction. Plur quality and professionalism are the basis of our everyday work on coherent, optimal solutions.</p>
+														</div>
+												</article>
+										</li>
+										<li>
+												<article class="uk-comment uk-transition-fade">
+														<header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+																<div class="uk-width-auto">
+																		<img class="uk-comment-avatar" src="/theme/plur_homepage/images/testimonials/mateusz_rokita.jpeg" width="80" height="80" alt="">
+																</div>
+																<div class="uk-width-expand">
+																		<h4 class="uk-comment-title uk-margin-remove">Mateusz Rokita</h4>
+																		<ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+																				<li>Business Advisor</li>
+																		</ul>
+																</div>
+														</header>
+														<div class="uk-comment-body">
+																<p class="text-light">As a strategy consultant working for world top brands I learned that only the right execution is the key to success. PLUR is a small company with big visions but team determination and professionalism make me feel that it is only the question of time when we will see PLUR on stock exchange.</p>
+														</div>
+												</article>
+										</li>
+								</ul>
+								<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin-top"></ul>
+						</div>
+					</div>
+
+
+
+				</div>
+
+				<div class="uk-visible@m uk-width-1-4@m">
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="contact-section uk-section uk-section-primary">
+		<div class="uk-container" uk-scrollspy="cls: uk-animation-fade">
+			<div class="uk-text-center">
+				<h1>Contact us!</h1>
+			</div>
+			<div class="uk-container uk-container-small uk-text-center">
+				<p class="text-light uk-text-large">Looking for bespoke software, consultancy or partnership? Don't hesitate to contact us!</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="contact-section uk-section">
+		<div class="uk-container">
+			<div class="uk-flex uk-flex-wrap">
+
+				<div class="uk-width-1-1 uk-width-1-2@s uk-width-1-3@m uk-text-center uk-text-left@s uk-flex-first@s">
+					<h4 class="text-bold">Company</h4>
+					<p class="text-light">KRS: 0000519680</br>NIP: 5223017508</p>
+					<address>
+						<p class="text-light">ul. Gorczewska 144</br>01-460, Warszawa</br>Poland</p>
+					</address>
+				</div>
+
+				<div class="uk-width-1-1 uk-width-1-2@s uk-width-1-3@m uk-text-center uk-text-left@s uk-flex-first uk-margin-bottom">
+					<h4 class="text-bold">Contact</h4>
+					<p class="text-light"><a href="mailto:plur@plur.tech" class="uk-link-heading"><span uk-icon="mail"></span> plur@plur.tech</a></br>
+					<a href="tel:0048665776417" class="uk-link-heading"><span uk-icon="receiver"></span> +48 665 776 417 (sales)</br>
+					<a href="tel:0048693352997" class="uk-link-heading"><span uk-icon="receiver"></span> +48 693 352 997 (office)</p>
+					<h4 class="text-bold">Find us!</h4>
+					<a href="https://twitter.com/PLUR_technology" target="_blank" class="uk-link-heading"><span uk-icon="icon: twitter; ratio: 2"></span></a>
+					<a href="https://www.facebook.com/plur.tech/" target="_blank" class="uk-link-heading"><span uk-icon="icon: facebook; ratio: 2"></span></a>
+					<a href="https://www.linkedin.com/company/plur-tech/" target="_blank" class="uk-link-heading"><span uk-icon="icon: linkedin; ratio: 2"></span></a>
+				</div>
+
+				<div class="uk-visible@s uk-width-1-1@s uk-width-1-3@m">
+					<h4 class="text-bold">Follow us on Twitter</h4>
+					<a class="twitter-timeline" href="https://twitter.com/PLUR_technology?ref_src=twsrc%5Etfw" data-height="250" data-chrome="nofooter noheader noborders transparent">Tweets by PLUR_technology</a>
+					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<div class="uk-text-right">
+						<a href="https://twitter.com/PLUR_technology?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @PLUR_technology</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="contact-section uk-section uk-section-secondary uk-padding">
+		<div class="uk-container uk-text-center">
+			<h5 class="uk-text-muted">Copyright © 2018 PLUR | All right reserved.</h5>
+		</div>
+	</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="/theme/plur_homepage/js/uikit.min.js"></script>
+		<script src="/theme/plur_homepage/js/uikit-icons.min.js"></script>
+	<script src="/theme/plur_homepage/js/particles.min.js"></script>
+	<script src="/theme/plur_homepage/js/particles-init.js"></script>
+		<script src="/theme/plur_homepage/js/init.js"></script>
 	</body>
 </html>

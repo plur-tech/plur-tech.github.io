@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="PLUR">
+
+    <meta name="description" content="PLUR Software House blog.">
+    <meta name="keywords" content="Blog, Programming, Development, Bugs, Tutorials, Software">
+    <link rel="icon" href="/images/favicon.jpg">
+
+
+    <title>PLUR - Analyzing memory usage in Python 🐍 - case study</title>
+
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,,800,900|Josefin+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="/theme/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/theme/css/owl.theme.default.min.css">
+
+    <!-- magnific-popup CSS -->
+    <link rel="stylesheet" href="/theme/css/magnific-popup.css">
+
+    <!-- Font Icon Core CSS -->
+    <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/css/et-line.css">
+    <link rel="stylesheet" href="/theme/css/ionicons.min.css">
+
+    <!-- Core Style Css -->
+    <link rel="stylesheet" href="/theme/css/style.css">
+
+    <!--[if lt IE 9]-->
+    <script src="/theme/js/html5shiv.min.js"></script>
+    <!--[endif]-->
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+                <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="PLUR">
+
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="">
+    <meta property="og:url" content="/analyzing-memory-usage-in-python.html">
+    <meta property="og:title" content="Analyzing memory usage in Python 🐍 - case study">
+    <meta property="og:description" content="">
+       <meta property="og:image" content="/analyzing-memory-usage-in-python/graphana.png">
+    <meta property="article:published_time" content="2018-07-16 10:20:00+02:00">
+
+
+    </head>
+    <body>
+        <!-- ====== Preloader ======  -->
+        <div class="loading">
+            <div class="load-circle"></div>
+        </div>
+        <!-- ======End Preloader ======  -->
+
+        <!-- ====== button-top ======  -->
+        <div class="button-top" data-scroll-nav="0">
+            <span><i class="fa fa-angle-up" aria-hidden="true"></i></span>
+        </div>
+        <!-- ======End button-top ======  -->
+
+        <!-- ====== Navgition ======  -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-icon-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- logo -->
+                <a href="/">
+                    <div class="logo">
+                        <h1>PLUR</h1>
+                    </div>
+                </a>
+
+                </div>
+
+                <!-- Collect the nav links, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="nav-icon-collapse">
+                <!-- links -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/" >Home</a></li>
+
+                        <li><a href="/blog">Blog</a></li>
+
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+            </nav>
+            <!-- ====== End Navgition ======  -->
+
+            <!--====== Header ======-->
+            <section class="sub-header">
+                <div class="container">
+                    <div class="v-middle">
+
+                        <!-- Caption -->
+                        <div class="caption text-center">
+                                <a href="/blog"><h2 class="mb-15">Our community blog</h2></a>
+                            <h6>Technology, programming, management and random stuff</h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--====== End Header ======-->
+
+
+            <!--====== mp-blog ======-->
+            <section class="mp-blog section-padding">
+                <div class="container">
+<div class="row">
+  <div class="col-md-8">
+      <div class="posts">
+<!-- item -->
+<div class="item">
+    <div class="content">
+        <div class="post-img">
+            <a href="/analyzing-memory-usage-in-python.html">
+                <img src="/images/analyzing-memory-usage-in-python/graphana.png" alt="Analyzing memory usage in Python 🐍 - case study">
+            </a>
+        </div>
+
+        <div class="post-info">
+            <a href="/analyzing-memory-usage-in-python.html">
+                <h2>Analyzing memory usage in Python 🐍 - case study</h2>
+            </a>
+            <div class="mor-inf">
+                <ul>
+                    <li><span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>Posted By <a href="/author/przemyslaw-lada.html">Przemysław Łada</a></li>
+                    <li><span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>Mon 16 July 2018</li>
+                    <li><span class="icon"><i class="fa fa-tags" aria-hidden="true"></i></span><a href="/tag/python.html">python</a>, <a href="/tag/memoryleak.html">memoryleak</a>, <a href="/tag/memory_profiler.html">memory_profiler</a>, <a href="/tag/pympler.html">pympler</a>, <a href="/tag/objgraph.html">objgraph</a>, <a href="/tag/beautifulsoup.html">BeautifulSoup</a>, <a href="/tag/networkx.html">networkx</a></li>
+                </ul>
+            </div>
+            <p class="mb-10"><p>Recently I've bumped into unusual situation of too much RAM usage in our python app. It was one of long running tasks which started to use more and more memory. It wasn't a problem till we used it with very heavy assignment. It effected with crush because of memory shortage (python interpreter used more then 2 GiB). Below, you can see what I saw in our Grafana dashboard:
+<a href="images/analyzing-memory-usage-in-python/graphana.png"><img alt="Image Alt Text" src="images/analyzing-memory-usage-in-python/graphana.png"></a></p>
+<p>First move was to carefully check code in search of obvious mistakes. Couple of optimizations was done but it didn't fix main problem. So I stepped into unknown territory of analyzing and profiling memory usage in Python.</p>
+<h2>Measure memory usage: <code>memory_profiler</code></h2>
+<p>First tool I recommend is package called <code>memory_profiler</code>(<a href="https://pypi.org/project/memory_profiler/">homepage</a>). You can get it with</p>
+<div class="highlight"><pre><span></span>pip install memory_profiler
+</pre></div>
+
+
+<p>and you can easily use it simply decorating your function with <code>@profile</code> decorator. Example script looks like this:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">memory_profiler</span> <span class="kn">import</span> <span class="n">profile</span>
+
+<span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;memory_profiler.log&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span>
+
+<span class="nd">@profile</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">fp</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">my_func</span><span class="p">():</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;a&#39;</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">5</span>  <span class="c1"># 5 MB of data</span>
+    <span class="nb">buffer</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">del</span> <span class="n">data</span>
+    <span class="k">return</span> <span class="nb">buffer</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">my_func</span><span class="p">()</span>
+</pre></div>
+
+
+<p>If you run this code you will get result like this in your log file</p>
+<div class="highlight"><pre><span></span><span class="gh">Line #    Mem usage    Increment   Line Contents</span>
+<span class="gh">================================================</span>
+     8     11.7 MiB     11.7 MiB   @profile(stream=fp)
+     9                             def my_func():
+    10     17.7 MiB      6.0 MiB       data = b&#39;a&#39; <span class="ge">* 1024 *</span> 1024 * 5  # 5 MB of data
+    11     17.7 MiB      0.0 MiB       buffer = BytesIO(data)
+    12     17.7 MiB      0.0 MiB       del data
+    13     17.7 MiB      0.0 MiB       return buffer
+</pre></div>
+
+
+<h3>How to use <code>memory_profiler</code> with generators</h3>
+<p>Some methods in our app, suspected of being responsible for memory leak are generators. I had some problems decorating generator method with <code>@profile</code> decorator (there were no result given back). I read that generators are supported by <strong>memory_profiler</strong> library but I didn't found solution how to make it work.</p>
+<p>As suggested in this <a href="https://stackoverflow.com/a/38050405"><em>stackoverflow answer</em></a> I've put <em>before</em> and <em>after</em> <code>memory_profiler.memory_usage()</code> method and measure memory footprint of every iteration generator produced.</p>
+<h2>Actual size of python object: <strong>pympler</strong></h2>
+<p><strong>pympler</strong> (<a href="https://pythonhosted.org/Pympler/">homapage</a>) is another great tool to measure and monitor memory behavior of python app. It have many interesting functionalities like <strong>Muppy</strong> which can identify if objects are leaked out of a scope between two reference points. In my case I used only great <code>pympler.asizeof</code> to investigate how much memory <strong>NetworkX</strong> graphs and my other object were actually using. In contrast to <code>sys.getsizeof</code> from python standard library it sizes objects recursively and can work out of the box on objects not being basic types like lists, strings or floats</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pympler</span> <span class="kn">import</span> <span class="n">asizeof</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Size of graph:&#39;</span><span class="p">,</span> <span class="n">sizeof_fmt</span><span class="p">(</span><span class="n">asizeof</span><span class="o">.</span><span class="n">asizeof</span><span class="p">(</span><span class="n">networkx_graph</span><span class="p">)))</span>
+</pre></div>
+
+
+<p>Logs similar to this one helped verify actual size of objects during program execution.</p>
+<h2>Tracking references with <strong>objgraph</strong></h2>
+<p>Python have garbage collector so problems with memory leaks usually comes from some not removed object references. Great <strong>objgraph</strong> is a tool which makes tracking those references an easy task. It can then present them in form of <a href="https://www.graphviz.org/"><strong>graphviz</strong></a> graphs.</p>
+<p>First functionality worth mentioning of <strong>objgraph</strong> I used, was <code>objgraph.show_most_common_types()</code> this great feature provides quick overview of the objects in memory in form like this:</p>
+<div class="highlight"><pre><span></span><span class="kd">function</span>                   <span class="mi">15585</span>
+<span class="nx">dict</span>                       <span class="mi">11811</span>
+<span class="nx">tuple</span>                      <span class="mi">6603</span>
+<span class="nx">list</span>                       <span class="mi">6182</span>
+<span class="nx">weakref</span>                    <span class="mi">3387</span>
+<span class="nx">type</span>                       <span class="mi">1992</span>
+<span class="nx">getset_descriptor</span>          <span class="mi">1819</span>
+<span class="nx">builtin_function_or_method</span> <span class="mi">1416</span>
+<span class="nx">Tag</span>                        <span class="mi">1381</span>
+<span class="nx">NavigableString</span>            <span class="mi">1348</span>
+</pre></div>
+
+
+<p>Using <strong>memory_profiler</strong> we manage to find section of code generating big memory usage. I used <code>objgraph.show_most_common_types(limit=10)</code> on this sections and logged usage on couple of program iterations. This way I found out what kind of objects were appearing in memory and where still residing there even after forced garbage collector action.
+In this specific example it was <strong>BeautifulSoup</strong>s <code>Tag</code> and <code>NavigableString</code> class objects.</p>
+<p>Ok, so now we know that something is wrong with removing <code>Tag</code> objects from memory by garbage collector. So we can use <strong>objgraph</strong> ability to show object back-references.</p>
+<div class="highlight"><pre><span></span># get arbitrary Tag class object
+obj = objgraph.by_type(&#39;Tag&#39;)[1000]
+objgraph.show_backrefs(obj, max_depth=10, filename=&#39;sample-backref-graph.png&#39;)
+</pre></div>
+
+
+<p>this method can produce graph like this:
+<a href="images/analyzing-memory-usage-in-python/sample-backref-graph.png"><img alt="Image Alt Text" src="images/analyzing-memory-usage-in-python/sample-backref-graph.png"></a> with our <code>Tag</code> object colored in red. This graph is quite detailed, complex and overwhelming but you can read all references from it. This graphs usually can look much simpler. More like this:
+<a href="images/analyzing-memory-usage-in-python/sample-backref-parent-graph.png"><img alt="Image Alt Text" src="images/analyzing-memory-usage-in-python/sample-backref-parent-graph.png"></a>
+So you can easily get information about back-references from it.</p>
+<h3>Memory leak connected with <strong>BeautifulSoup</strong></h3>
+<p>In this specific example we fell into well known <strong>BeautifulSoup</strong> trap. In our app we were parsing some html and giving back url to images:</p>
+<div class="highlight"><pre><span></span>soup = BeautifulSoup(html_content, &quot;html.parser&quot;)
+
+for img in soup.find_all(&#39;img&#39;, src=True):
+    yield generate_link(base_url, img[&#39;src&#39;])
+</pre></div>
+
+
+<p>As you can see we are making <strong>BeautifulSoup</strong> object by parsing <code>html_content</code>. This part is quite memory consuming (depends of html size but it can be even 1-4 MiB of memory). Then we find all images and return links. Everything should end up well, and after method execution python garbage collector should remove <strong>BeautifulSoup</strong> object from memory because there is no more references to it. But that is known issues that expressions like this: <code>img['src']</code> returns results of type <code>NavigableString</code> instead of <code>str</code>. <code>NavigableString</code>s still have references to <code>Tag</code> object and because of that whole parsed by <strong>BeautifulSoup</strong> html page is still in memory even after method ends. 
+On <em>StackOverflow</em> I found <a href="https://stackoverflow.com/a/42535781">great hint and easy solution</a>:</p>
+<p>Simply transform <code>img['src']</code> to string by <code>str(img['src'])</code>. This way you transform <code>NavigableString</code> into standard string and loose all unnecessary references and garbage collector can work as assumed.</p>
+<h2>NetworkX graph memory leak</h2>
+<p>Our app during work is building graph representing connections between web pages. We are using python library called <a href="https://networkx.github.io/"><strong>NetworkX</strong></a>. After profiling memory usage I saw that graph was getting bigger and bigger even when no new <em>nodes</em> or <em>edges</em> were created.
+In <strong>NetworkX</strong> you can represent <em>edges</em> by any kind of object. Also custom made, but for it to work you have to implement <code>__hash__</code> method:</p>
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">Link</span>:
+    <span class="kt">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">url</span>: <span class="kt">str</span><span class="p">,</span> <span class="nx">to_parse</span>: <span class="kt">bool</span><span class="o">=</span><span class="nx">False</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">url</span> <span class="o">=</span> <span class="nx">url</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">to_parse</span> <span class="o">=</span> <span class="nx">to_parse</span>
+
+    <span class="nx">def</span> <span class="nx">__eq__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">other</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">if</span> <span class="nx">isinstance</span><span class="p">(</span><span class="nx">other</span><span class="p">,</span> <span class="nx">Link</span><span class="p">)</span><span class="o">:</span>
+            <span class="k">return</span> <span class="nx">self</span><span class="p">.</span><span class="nx">url</span> <span class="o">==</span> <span class="nx">other</span><span class="p">.</span><span class="nx">url</span>
+        <span class="k">return</span> <span class="nx">False</span>
+
+    <span class="nx">def</span> <span class="nx">__ne__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">other</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="nx">not</span> <span class="nx">self</span><span class="p">.</span><span class="nx">__eq__</span><span class="p">(</span><span class="nx">other</span><span class="p">)</span>
+
+    <span class="nx">def</span> <span class="nx">__hash__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="nx">hash</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span>
+</pre></div>
+
+
+<p>and then if you try to make something like this:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="kn">as</span> <span class="nn">nx</span>
+<span class="n">link1</span> <span class="o">=</span> <span class="n">Link</span><span class="p">(</span><span class="s1">&#39;https://www.example.com/&#39;</span><span class="p">)</span>
+<span class="n">link2</span> <span class="o">=</span> <span class="n">Link</span><span class="p">(</span><span class="s1">&#39;https://www.example.com/&#39;</span><span class="p">)</span>
+
+<span class="n">graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">link1</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">link2</span><span class="p">)</span>
+</pre></div>
+
+
+<p>there will be only one <em>node</em> in graph.
+And everything is fine. But lets analyze another case:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="kn">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">objgraph</span>
+
+<span class="n">graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">add_links</span><span class="p">(</span><span class="n">graph</span><span class="p">):</span>
+    <span class="n">parent1</span> <span class="o">=</span> <span class="n">Link</span><span class="p">(</span><span class="s1">&#39;https://www.example.com/&#39;</span><span class="p">)</span>
+    <span class="n">graph</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">parent1</span><span class="p">)</span>
+    <span class="n">link1</span> <span class="o">=</span> <span class="n">Link</span><span class="p">(</span><span class="s1">&#39;https://www.example.com/a&#39;</span><span class="p">)</span>
+    <span class="n">graph</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">link1</span><span class="p">)</span>
+    <span class="n">graph</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">parent1</span><span class="p">,</span> <span class="n">link1</span><span class="p">)</span>
+
+    <span class="n">parent2</span> <span class="o">=</span> <span class="n">Link</span><span class="p">(</span><span class="s1">&#39;https://www.example.com/&#39;</span><span class="p">)</span>
+    <span class="c1"># parent2 returns same hash as parent1</span>
+    <span class="n">link2</span> <span class="o">=</span> <span class="n">Link</span><span class="p">(</span><span class="s1">&#39;https://www.example.com/b&#39;</span><span class="p">)</span>
+    <span class="n">graph</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">parent2</span><span class="p">,</span> <span class="n">link2</span><span class="p">)</span>
+
+<span class="n">add_links</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+<span class="n">objgraph</span><span class="o">.</span><span class="n">show_backrefs</span><span class="p">(</span><span class="n">objgraph</span><span class="o">.</span><span class="n">by_type</span><span class="p">(</span><span class="s1">&#39;Link&#39;</span><span class="p">),</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;graph-back-refs.png&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>At the end there will be 3 <em>nodes</em> and 2 <em>edge</em> in the graph because objects <code>parent1</code> and <code>parent2</code> return same hash. But after using <code>objgraph</code> I found out that there is  reference from graph to <code>parent1</code> but also to <code>parent2</code>. Line <code>objgraph.show_backrefs(objgraph.by_type('Link'), max_depth=10, filename='graph-back-refs.png')</code> give this graph as result (as you can see there is 4 <code>Link</code> objects not 3 referenced by <code>DiGraph</code>:
+<a href="images/analyzing-memory-usage-in-python/graph-back-refs.png"><img alt="Image Alt Text" src="images/analyzing-memory-usage-in-python/graph-back-refs.png"></a></p>
+<p>It was memory leak because garbage collector was unable to remove objects like <code>parent2</code> after function <code>add_links()</code> ended. Solution was to check if there already was edge in graph before creating one.</p>
+<h2>Summary</h2>
+<p>This way we manage to find and fix memory leaks in our application. We reduced memory usage from <em>~2.5 GiB</em> to <em>138 MiB</em>. And our Grafana reported it this way:
+<a href="images/analyzing-memory-usage-in-python/graphana3.png"><img alt="Image Alt Text" src="images/analyzing-memory-usage-in-python/graphana3.png"></a></p>
+<h2>List of useful links</h2>
+<p>Big thanks to authors of all this articles and libraries. We recommend to read all of them if you have problems with memory leaks in your python programs. </p>
+<ol>
+<li>If you are not familiar with the way python garbage collector works, we strongly recommend this articles:<ol>
+<li><a href="https://rushter.com/blog/python-garbage-collector/">Garbage collection in Python: things you need to know</a></li>
+<li><a href="https://rushter.com/blog/python-memory-managment/">Memory management in Python</a></li>
+<li>And a little dusty <a href="https://pyvideo.org/pycon-us-2011/pycon-2011---quot-dude--where--39-s-my-ram--quot-.html">"Dude, Where's My RAM?" - A deep dive into how Python uses memory</a></li>
+</ol>
+</li>
+<li>Great Case study from <em>Benoit Bernard</em>: <a href="https://benbernardblog.com/tracking-down-a-freaky-python-memory-leak/"><strong>Tracking Down a Freaky Python Memory Leak</strong></a></li>
+<li><a href="https://chase-seibert.github.io/blog/2013/08/03/diagnosing-memory-leaks-python.html">Diagnosing Memory “Leaks” in Python</a> by <em>Chase Seibert</em></li>
+<li><a href="https://pypi.org/project/memory_profiler/"><strong>memory_profiler</strong> official page</a></li>
+<li><a href="http://fa.bianp.net/blog/2014/plot-memory-usage-as-a-function-of-time/">Plot memory usage as a function of time</a></li>
+<li><a href="http://www.marinamele.com/7-tips-to-time-python-scripts-and-control-memory-and-cpu-usage">7 tips to Time Python scripts and control Memory &amp; CPU usage</a></li>
+<li><a href="https://mg.pov.lt/objgraph/"><strong>ObjGraph</strong> - Python Object Graphs Documentation</a></li>
+<li><a href="https://pythonhosted.org/Pympler/"><strong>Pympler</strong> documentation</a></li>
+</ol></p>
+
+        </div>
+    </div>
+</div>
+    
+<!-- comments -->
+<div class="mb-80">
+</div>
+      </div>
+  </div>
+
+  <!-- side bar -->
+  <div class="col-md-4">
+      <div class="side-bar">
+
+          <div class="widget">
+              <div class="tags">
+                  <div class="side-tit">
+                      <h6 class="ctit">Tags</h6>
+                  </div>                      <a href="/tag/beautifulsoup.html"><span>BeautifulSoup</span></a>
+                      <a href="/tag/memory_profiler.html"><span>memory_profiler</span></a>
+                      <a href="/tag/memoryleak.html"><span>memoryleak</span></a>
+                      <a href="/tag/networkx.html"><span>networkx</span></a>
+                      <a href="/tag/objgraph.html"><span>objgraph</span></a>
+                      <a href="/tag/pympler.html"><span>pympler</span></a>
+                      <a href="/tag/python.html"><span>python</span></a>
+              </div>
+          </div>
+
+          <div class="widget">
+              <div class="follow">
+                  <div class="side-tit">
+                      <h6 class="ctit">Follow Us</h6>
+                  </div>
+                  <div class="social">
+                      <a href="https://twitter.com/PLUR_technology" target="_blank">
+                          <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                      </a>
+                      <a href="https://www.facebook.com/plur.tech/" target="_blank">
+                          <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                      </a>
+                      <a href="https://www.linkedin.com/company/plur-tech/" target="_blank">
+                          <span><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+                </div>
+            </section>
+            <!--====== End mp-blog ======-->
+
+            <!-- ====== Footer ======  -->
+            <footer class="gray">
+                <p>PLUR Software House &copy; Blog powered by <a href="http://getpelican.com" target="_blank">Pelican</a></p>
+            </footer>
+            <!-- ====== End Footer ======  -->
+
+            <!-- jQuery -->
+            <script src="/theme/js/jquery-3.0.0.min.js"></script>
+            <script src="/theme/js/jquery-migrate-3.0.0.min.js"></script>
+
+            <!-- bootstrap -->
+            <script src="/theme/js/bootstrap.min.js"></script>
+
+            <!-- scrollIt -->
+            <script src="/theme/js/scrollIt.min.js"></script>
+
+            <!-- magnific-popup -->
+            <script src="/theme/js/jquery.magnific-popup.min.js"></script>
+
+            <!-- owl carousel -->
+            <script src="/theme/js/owl.carousel.min.js"></script>
+
+            <!-- stellar js -->
+            <script src="/theme/js/jquery.stellar.min.js"></script>
+
+            <!-- typed js -->
+            <script src="/theme/js/typed.js"></script>
+
+            <!-- isotope.pkgd.min js -->
+            <script src="/theme/js/isotope.pkgd.min.js"></script>
+
+            <!-- validator js -->
+            <script src="/theme/js/validator.js"></script>
+
+            <!-- custom script -->
+            <script src="/theme/js/custom.js"></script>
+      
+    </body>
+</html>
